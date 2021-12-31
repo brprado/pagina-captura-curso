@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/blue.png");
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+header {
+  background-color: #48c5ce;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border: 1px solid #48c5ce;
+  border-radius: 2px;
+}
+
+.title {
+  font-size: 22px;
+}
+section {
+  color: BLACK;
+  padding: 20px;
+  background-image: url("../images/people.jpg");
+  background-size: cover;
+  overflow: hidden; /*faz com que a imagem preencha a tela*/
+}
+.formContainer {
+  max-width: 230px; /*Melhor do que usar uma medida fixa*/
+  background-color: #ffffffbb;
+  padding: 20px;
+  float: right;
+  border-radius: 3px;
+}
+h2 {
+  font-size: 20px;
+  text-align: left;
+}
+.mb {
+  margin-bottom: 15px;
+}
+input,
+select {
+  /*aplicado aos dois ao mesmo tempo*/
+  width: 100%;
+  box-sizing: border-box; /*fica alinhado ao padding do pai e aos outros elementos*/
+  padding: 10px;
+  border: none; /*sem bordas*/
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  color: white;
+  background-color: #48c5ce;
+  font-weight: bold;
+  border-radius: 5px;
+}
+input[type="submit"]:hover {
+  color: white;
+  background-color: #06a1ac;
+  font-weight: bold;
+  border-radius: 5px;
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  /*tirando o estilo(a setinha) do select em todos os navegadores*/
+  /*Agora vamos adicionar nosso design de stinha  para o o select*/
+  background-image: url("../images/arrow.jpg");
+  background-repeat: no-repeat;
+
+  /*agora vamos posicionar a nossa unica setinha*/
+  background-position-x: calc(100% - 10px); /*limite do eixo x - 10px*/
+  background-position-y: calc(100% - 10px); /*limite do eixo y - 10px*/
+}
+footer {
+  background-color: #202121;
+  padding: 40px;
+  text-align: center;
+}
+p {
+  text-align: left;
+}
+.picture {
+  width: 160px;
+}
+.description {
+  display: inline-block;
+
+  color: white;
+  max-width: 40%;
+  margin-left: 40px;
+}
+.description p,
+.description h2 {
+  /*estilo para paragrafos e h2 dentro da da classe description*/
+  margin-bottom: 20px;
+}
+
+@media (max-width: 548px) {
+  section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .picture {
+    position: absolute;
+    width: 120px;
+    left: 10px;
+    top: 122%;
+  }
+  p {
+    font-size: small;
+  }
+  .formContainer {
+    display: absolute;
+    margin: auto;
+  }
+}
+@media (max-width: 321px) {
+  p {
+    font-size: 12px;
+  }
+  footer {
+    position: relative;
+  }
+  .picture {
+    width: 100px;
+    top: 10%;
+  }
+  h2 {
+    font-size: 13px;
+  }
+}
